@@ -1,0 +1,14 @@
+{
+  "name": "@pro-amineumt/dashboard",
+  "version": "0.1.0-alpha",
+  "description": "Pro_AmineUMT IDE with AI Platform — dashboard",
+  "license": "Apache-2.0",
+  "author": "Amine Saoud ibn al-Bashir <amine@pro-amine.com>",
+  "scripts": {
+    "build": "echo 'TODO: build for dashboard'",
+    "test":  "echo 'TODO: test for dashboard'"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

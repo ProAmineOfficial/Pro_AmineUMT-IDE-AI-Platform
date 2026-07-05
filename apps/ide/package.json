@@ -1,0 +1,14 @@
+{
+  "name": "@pro-amineumt/ide",
+  "version": "0.1.0-alpha",
+  "description": "Pro_AmineUMT IDE with AI Platform — ide",
+  "license": "Apache-2.0",
+  "author": "Amine Saoud ibn al-Bashir <amine@pro-amine.com>",
+  "scripts": {
+    "build": "echo 'TODO: build for ide'",
+    "test":  "echo 'TODO: test for ide'"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
