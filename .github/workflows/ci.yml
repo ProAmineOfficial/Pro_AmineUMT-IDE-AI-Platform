@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: EditorConfig check
+        uses: editorconfig-checker/action-editorconfig-checker@main
+      - name: Markdown lint
+        run: |
+          npm install -g markdownlint-cli
+          markdownlint '**/*.md' --ignore node_modules --ignore .umt
+
+  build-ide:
+    name: Build IDE extension
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: |
+          if [ -f apps/ide/package.json ]; then
+            cd apps/ide
+            npm ci
+          fi
+      - name: Build
+        run: |
+          if [ -f apps/ide/package.json ]; then
+            cd apps/ide
+            npm run build --if-present
+          fi
+
+  build-aia-engine:
+    name: Build AIA Engine
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install and test
+        run: |
+          if [ -f core/aia-engine/package.json ]; then
+            cd core/aia-engine
+            npm ci
+            npm test --if-present
+          fi
+
+  docs:
+    name: Documentation build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate documentation structure
+        run: |
+          for d in adr standards docs; do
+            if [ -d "$d" ]; then
+              find "$d" -name "*.md" -type f | while read f; do
+                if [ ! -s "$f" ]; then
+                  echo "Empty markdown file: $f"
+                  exit 1
+                fi
+              done
+            fi
+          done

@@ -1,0 +1,38 @@
+name: Feature request
+description: Suggest a new feature or improvement.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem you are trying to solve
+      description: A clear description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Core / AIA Engine
+        - Apps / IDE
+        - Apps / CLI
+        - Apps / Simulator
+        - Hardware / BGA 16×16
+        - Boards
+        - Documentation
+        - Standards
+        - Other
+    validations:
+      required: true

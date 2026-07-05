@@ -1,0 +1,38 @@
+# Pro_AmineUMT IDE with AI Platform — CODEOWNERS
+# Order matters: the last matching pattern takes precedence.
+#
+# CODEOWNERS have merge rights on their directories and are automatically
+# requested for review on pull requests touching those paths.
+
+# Default owner — the founder
+*                            @amine-sib
+
+# Legal, identity, brand — founder only
+/LICENSE                     @amine-sib
+/NOTICE                      @amine-sib
+/TRADEMARKS.md               @amine-sib
+/AUTHORS.md                  @amine-sib
+/GOVERNANCE.md               @amine-sib
+
+# Architecture Decision Records — founder + architects
+/adr/                        @amine-sib
+
+# Normative standards — founder + standards council
+/standards/                  @amine-sib
+
+# Platform engine
+/core/                       @amine-sib
+/core/aia-engine/            @amine-sib
+
+# Applications
+/apps/ide/                   @amine-sib
+/apps/cli/                   @amine-sib
+/apps/simulator/             @amine-sib
+/apps/dashboard/             @amine-sib
+
+# Hardware
+/hardware/                   @amine-sib
+/boards/                     @amine-sib
+
+# Community
+/community/                  @amine-sib

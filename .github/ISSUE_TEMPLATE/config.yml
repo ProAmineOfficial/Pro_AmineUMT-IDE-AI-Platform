@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Community Discussions
+    url: https://github.com/ProAmineOfficial/Pro_AmineUMT-IDE-AI-Platform/discussions
+    about: Ask questions, share showcases, and discuss ideas.
+  - name: Security disclosure
+    url: mailto:security@pro-amine.com
+    about: Report a security vulnerability privately.

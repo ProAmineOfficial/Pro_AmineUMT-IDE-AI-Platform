@@ -1,0 +1,57 @@
+name: Bug report
+description: Report a bug in the platform, IDE, AIA Engine, or a board profile.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please provide the
+        information below so we can reproduce and fix it quickly.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the bug.
+      placeholder: When I flash `adc_read.umt` on NanoKit ESP32, the ADC returns 0 constantly.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Create a new project.
+        2. Paste the code below into src/MyProject.umt.
+        3. Build for target `nanokit-esp32`.
+        4. Flash to a NanoKit Integrated ESP32.
+        5. Observe the serial monitor.
+    validations:
+      required: true
+  - type: input
+    id: target-board
+    attributes:
+      label: Target board
+      placeholder: nanokit-esp32
+    validations:
+      required: true
+  - type: input
+    id: umt-version
+    attributes:
+      label: UMT SDK version
+      placeholder: 0.1.0-alpha
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Ubuntu 24.04
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Attach `.umt/logs/build.log` and any serial output.
+      render: shell

@@ -1,0 +1,40 @@
+name: Standards RFC
+description: Propose a revision to one of the ten normative standards.
+title: "[RFC]: "
+labels: ["rfc", "standards"]
+body:
+  - type: dropdown
+    id: standard
+    attributes:
+      label: Affected standard
+      options:
+        - S-001 UMT VR API Naming
+        - S-002 BGA 16×16 Package Substrate
+        - S-003 AIA Engine Protocol
+        - S-004 Pure VR Source
+        - S-005 Debug at Source
+        - S-006 Board Profile Format
+        - S-007 Genius Guides Format
+        - S-008 UMT SDK Interface
+        - S-009 Toolchain Integration
+        - S-010 Simulation Contract
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed revision
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Backward-compatibility impact
+    validations:
+      required: true
