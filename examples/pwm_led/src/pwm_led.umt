@@ -1,0 +1,17 @@
+// pwm_led.umt — smooth LED brightness control on VR_PWM_OUT0.
+
+void setup() {
+  UMT.Interface(VR_PWM0).activate();
+  UMT.Interface_Pin(VR_PWM_OUT0).enable();
+}
+
+void loop() {
+  for (int duty = 0; duty <= 255; duty += 5) {
+    UMT.Interface_Pin(VR_PWM_OUT0).write(duty);
+    UMT.delay(20);
+  }
+  for (int duty = 255; duty >= 0; duty -= 5) {
+    UMT.Interface_Pin(VR_PWM_OUT0).write(duty);
+    UMT.delay(20);
+  }
+}

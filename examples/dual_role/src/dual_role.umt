@@ -1,0 +1,25 @@
+// dual_role.umt — one pin, two roles, chosen at runtime by a threshold.
+// This is a demonstration only; production code typically chooses one role
+// at setup time and stays there.
+
+void setup() {
+  UMT.Interface(VR_ADC4).activate();
+  UMT.Interface_Pin(VR_ADC_IN4).enable();
+}
+
+void loop() {
+  int v = UMT.Interface_Pin(VR_ADC_IN4).read();
+
+  if (v > 2048) {
+    // Switch to digital mode and drive the LED.
+    UMT.Interface(VR_ADC4).deactivate();
+    UMT.Digital_Pin(VR_ADC_IN4).setMode(OUTPUT);
+    UMT.Digital_Pin(VR_ADC_IN4).write(HIGH);
+    UMT.delay(1000);
+
+    // Return to interface mode.
+    UMT.Interface(VR_ADC4).activate();
+    UMT.Interface_Pin(VR_ADC_IN4).enable();
+  }
+  UMT.delay(100);
+}

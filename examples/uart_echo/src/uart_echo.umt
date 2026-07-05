@@ -1,0 +1,14 @@
+// uart_echo.umt — bidirectional serial echo.
+
+void setup() {
+  UMT.Interface(VR_UART0).activate();
+  UMT.Interface_Pin(VR_UART_RX0).enable();
+  UMT.Interface_Pin(VR_UART_TX0).enable();
+}
+
+void loop() {
+  if (UMT.Interface_Pin(VR_UART_RX0).hasLine()) {
+    String line = UMT.Interface_Pin(VR_UART_RX0).readLine();
+    UMT.Interface_Pin(VR_UART_TX0).write("echo: " + line);
+  }
+}

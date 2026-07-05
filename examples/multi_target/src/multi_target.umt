@@ -1,0 +1,21 @@
+// multi_target.umt — the same source, three boards.
+// Compile and flash unchanged on:
+//   - nanokit-esp32
+//   - arduino-uno
+//   - pico
+//
+// The AIA Engine resolves VR_ADC_IN4 differently per board:
+//   - nanokit-esp32: GPIO32 (ADC1_CH4)
+//   - arduino-uno:   PC4 (A4)
+//   - pico:          GPIO28 (ADC2)
+
+void setup() {
+  UMT.Interface(VR_ADC4).activate();
+  UMT.Interface_Pin(VR_ADC_IN4).enable();
+}
+
+void loop() {
+  int v = UMT.Interface_Pin(VR_ADC_IN4).read();
+  UMT.Serial.println(v);
+  UMT.delay(100);
+}

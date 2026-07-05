@@ -1,0 +1,14 @@
+// MyProject.umt — starter project on the UMT Platform.
+// Copyright (c) 2026 <your name>
+// Licensed under Apache-2.0.
+
+void setup() {
+  UMT.Interface(VR_ADC4).activate();
+  UMT.Interface_Pin(VR_ADC_IN4).enable();
+}
+
+void loop() {
+  int v = UMT.Interface_Pin(VR_ADC_IN4).read();
+  UMT.Serial.println(v);
+  UMT.delay(50);
+}

@@ -1,0 +1,17 @@
+// i2c_scan.umt — enumerate devices on the I²C bus.
+
+void setup() {
+  UMT.Interface(VR_I2C0).activate();
+  UMT.Interface_Pin(VR_I2C_SDA0).enable();
+  UMT.Interface_Pin(VR_I2C_SCL0).enable();
+  UMT.Serial.println("Scanning I2C bus...");
+
+  for (uint8_t addr = 1; addr < 127; addr++) {
+    if (UMT.I2C(VR_I2C0).probe(addr)) {
+      UMT.Serial.print("Device found at 0x");
+      UMT.Serial.println(addr, HEX);
+    }
+  }
+}
+
+void loop() {}

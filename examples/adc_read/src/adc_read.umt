@@ -1,0 +1,13 @@
+// adc_read.umt — canonical VR_ADC4 example.
+// Reads a 10 kΩ potentiometer wiper on VR_ADC_IN4 and prints the value.
+
+void setup() {
+  UMT.Interface(VR_ADC4).activate();
+  UMT.Interface_Pin(VR_ADC_IN4).enable();
+}
+
+void loop() {
+  int v = UMT.Interface_Pin(VR_ADC_IN4).read();  // 0..4095
+  UMT.Serial.println(v);
+  UMT.delay(50);
+}

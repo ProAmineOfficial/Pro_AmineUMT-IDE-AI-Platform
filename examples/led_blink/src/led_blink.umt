@@ -1,0 +1,14 @@
+// led_blink.umt — classic first program.
+// The same pin VR_ADC_IN4, in DIGITAL role (deactivate), drives an LED.
+
+void setup() {
+  UMT.Interface(VR_ADC4).deactivate();
+  UMT.Digital_Pin(VR_ADC_IN4).setMode(OUTPUT);
+}
+
+void loop() {
+  UMT.Digital_Pin(VR_ADC_IN4).write(HIGH);
+  UMT.delay(500);
+  UMT.Digital_Pin(VR_ADC_IN4).write(LOW);
+  UMT.delay(500);
+}

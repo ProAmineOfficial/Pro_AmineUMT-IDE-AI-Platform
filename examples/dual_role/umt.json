@@ -1,0 +1,8 @@
+{
+  "project": "dual_role",
+  "target":  "nanokit-esp32",
+  "board":   "nanokit-esp32",
+  "port":    "auto",
+  "baud":    115200,
+  "build_mode": "release"
+}
