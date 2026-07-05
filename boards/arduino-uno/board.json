@@ -1,0 +1,19 @@
+{
+  "id": "arduino-uno",
+  "name": "Arduino UNO R3",
+  "mcu": "ATmega328P",
+  "architecture": "AVR 8-bit 16 MHz",
+  "flash": "32 KB",
+  "ram": "2 KB",
+  "toolchain": "arduino-avr",
+  "flash_protocol": "avrdude (UART)",
+  "restrictions": {
+    "reserved": [
+      "PB6",
+      "PB7 (crystal)"
+    ]
+  },
+  "developed_by": "Amine Saoud ibn al-Bashir",
+  "company": "Pro_Amine LLC (United States)",
+  "award": "Corporate Vision Magazine UK \u00b7 Technology Innovator Awards 2025 \u2014 Rising Star in Microchip Technology Solutions in Europe"
+}

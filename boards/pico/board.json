@@ -1,0 +1,20 @@
+{
+  "id": "pico",
+  "name": "Raspberry Pi Pico",
+  "mcu": "RP2040",
+  "architecture": "ARM Cortex-M0+ dual-core 133 MHz",
+  "flash": "2 MB",
+  "ram": "264 KB",
+  "toolchain": "rp2040-pico-sdk",
+  "flash_protocol": "picotool (USB BOOTSEL)",
+  "restrictions": {
+    "internal": [
+      "GPIO23",
+      "GPIO24",
+      "GPIO25 (LED)"
+    ]
+  },
+  "developed_by": "Amine Saoud ibn al-Bashir",
+  "company": "Pro_Amine LLC (United States)",
+  "award": "Corporate Vision Magazine UK \u00b7 Technology Innovator Awards 2025 \u2014 Rising Star in Microchip Technology Solutions in Europe"
+}

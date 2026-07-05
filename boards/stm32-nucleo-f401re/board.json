@@ -1,0 +1,14 @@
+{
+  "id": "stm32-nucleo-f401re",
+  "name": "STMicroelectronics Nucleo-F401RE",
+  "mcu": "STM32F401RE",
+  "architecture": "ARM Cortex-M4 84 MHz",
+  "flash": "512 KB",
+  "ram": "96 KB",
+  "toolchain": "stm32-hal",
+  "flash_protocol": "st-flash (ST-Link)",
+  "restrictions": {},
+  "developed_by": "Amine Saoud ibn al-Bashir",
+  "company": "Pro_Amine LLC (United States)",
+  "award": "Corporate Vision Magazine UK \u00b7 Technology Innovator Awards 2025 \u2014 Rising Star in Microchip Technology Solutions in Europe"
+}
