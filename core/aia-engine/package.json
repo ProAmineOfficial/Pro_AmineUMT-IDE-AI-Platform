@@ -1,0 +1,23 @@
+{
+  "name": "@pro-amineumt/aia-engine",
+  "version": "0.1.0-alpha",
+  "description": "Abstraction Intelligence Algorithm Engine — the platform engine of Pro_AmineUMT IDE with AI Platform",
+  "license": "Apache-2.0",
+  "author": "Amine Saoud ibn al-Bashir <amine@pro-amine.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "eslint": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
