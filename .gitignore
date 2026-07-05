@@ -1,0 +1,39 @@
+# Build artifacts
+.umt/
+build/
+dist/
+node_modules/
+*.log
+*.tmp
+
+# Toolchain artifacts
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.uf2
+*.map
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE local
+.vscode/settings.json
+.idea/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Coverage
+coverage/
+*.lcov
