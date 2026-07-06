@@ -1,3 +1,4 @@
+
 # Pro_AmineUMT IDE with AI Platform
 
 **One code. Any architecture.**
@@ -51,6 +52,16 @@ Pro_AmineUMT-IDE-AI-Platform/
 
 Each directory contains its own `README.md` explaining its scope.
 
+## Architecture Documentation
+
+The canonical architecture and design reference for the Pro_AmineUMT IDE with AI Platform. Each document is available in Markdown for GitHub rendering and PDF for offline distribution and citation.
+
+- **[Platform Architecture v3.1](docs/architecture/Pro_AmineUMT_IDE_AI_Platform_Architecture_v3_1.md)** — the master architecture document ([PDF](docs/architecture/Pro_AmineUMT_IDE_AI_Platform_Architecture_v3_1.pdf))
+- **[Pure VR Source Whitepaper](docs/whitepapers/Pro_AmineUMT_Architecture_v4_Supplement_PureVR.md)** — foundational decision #1: Pure VR Source / Hidden Native Backend ([PDF](docs/whitepapers/Pro_AmineUMT_Architecture_v4_Supplement_PureVR.pdf))
+- **[Debug at Source Whitepaper](docs/whitepapers/Pro_AmineUMT_Architecture_v4_Supplement_DebugAtSource.md)** — foundational decision #2: Debug at Source, Run at Native ([PDF](docs/whitepapers/Pro_AmineUMT_Architecture_v4_Supplement_DebugAtSource.pdf))
+- **[Interactive Architecture Map](prototype/architecture-map/ProAmineUMT_Architecture_Map_v4.jsx)** — React (JSX) visual system diagram (prototype)
+- **[Knowledge Base](prototype/knowledge-base/ProAmineUMT_Knowledge_Base_v7.jsx)** — React (JSX) structured platform vocabulary reference (prototype)
+
 ## Getting started
 
 1. Read `docs/getting-started/README.md`.
@@ -71,3 +82,6 @@ Sign the CLA at the first pull request.
 ---
 
 © Pro_Amine LLC · Developed by Amine Saoud ibn al-Bashir · Recognized by Corporate Vision Magazine UK · Technology Innovator Awards 2025 — Rising Star in Microchip Technology Solutions in Europe
+
+# Pro_AmineUMT-IDE-AI-Platform
+Official Open Source Repository for Pro_AmineUMT IDE with AI Platform, built on UMT Platform (Unified Microchip Technology Platform).
